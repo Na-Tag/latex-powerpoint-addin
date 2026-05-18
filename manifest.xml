@@ -10,11 +10,11 @@
   <DefaultLocale>ja-JP</DefaultLocale>
   <DisplayName DefaultValue="LaTeX Equation Editor" />
   <Description DefaultValue="Create and re-edit LaTeX equations on PowerPoint slides." />
-  <IconUrl DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//README.html" />
+  <IconUrl DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/README.html" />
   <AppDomains>
-    <AppDomain>https://na-tag.github.io/latex-powerpoint-addin/</AppDomain>
+    <AppDomain>https://na-tag.github.io/latex-powerpoint-addin</AppDomain>
     <AppDomain>https://appsforoffice.microsoft.com</AppDomain>
     <AppDomain>https://cdn.jsdelivr.net</AppDomain>
   </AppDomains>
@@ -22,7 +22,7 @@
     <Host Name="Presentation" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//taskpane.html" />
+    <SourceLocation DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/taskpane.html" />
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -68,14 +68,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//assets/icon-16.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//assets/icon-32.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//assets/icon-80.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/assets/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/assets/icon-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//commands.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//taskpane.html" />
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin//README.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/commands.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/taskpane.html" />
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://na-tag.github.io/latex-powerpoint-addin/README.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="LaTeX Equation Editor" />
