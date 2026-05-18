@@ -15,21 +15,23 @@ LaTeX 記法の数式を MathJax で SVG に変換し、スライドに挿入し
 
 ## 動かし方
 
-```bash
-npm install
-npm run start
-```
+### macの場合
 
-初回起動時に `office-addin-dev-certs` が `https://localhost` 用の開発証明書を準備します。
-ブラウザで `https://localhost:3000/taskpane.html` が開けることを確認してください。
+ターミナルで以下を実行
+```bash
+mkdir -p "$HOME/Library/Containers/com.microsoft.Powerpoint/Data/Documents/wef"
+
+cp manifest.xml "$HOME/Library/Containers/com.microsoft.Powerpoint/Data/Documents/wef/manifest.xml"
+```
+### windowsの場合
+
+現在開発中
 
 ## PowerPoint への読み込み
 
-1. `npm run start` でローカル HTTPS サーバーを起動します。
-2. PowerPoint を開きます。
-3. アドインのアップロード機能から `manifest.xml` を読み込みます。
-4. ホームタブに `LaTeX数式` ボタンが出ます。
-5. タスクペインで LaTeX を入力して `新しく挿入` を押します。
+1. PowerPoint を開きます。
+2. 「ホーム」タブの「アドイン」から `LaTeX数式` ボタンを選択します。
+3. LaTeX を入力して `新しく挿入` を押します。
 
 ## 編集の流れ
 
