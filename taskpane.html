@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LaTeX Equation Editor</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script>
+    window.MathJax = {
+      loader: { load: ["[tex]/ams", "[tex]/noerrors", "[tex]/noundefined"] },
+      tex: {
+        packages: { "[+]": ["ams", "noerrors", "noundefined"] },
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      },
+      svg: { fontCache: "none" },
+      startup: { typeset: false }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>LaTeX数式エディタ</h1>
+      <p>LaTeXを書いて、PowerPoint上に編集可能なSVG数式として配置します。</p>
+    </header>
+
+    <section class="field">
+      <label for="latexInput">LaTeX</label>
+      <textarea id="latexInput" spellcheck="false">\frac{\partial L}{\partial w}=\sum_{i=1}^{n}(\hat{y}_i-y_i)x_i</textarea>
+      <div class="hint">例: <code>\int_0^\infty e^{-x^2}\,dx=\frac{\sqrt{\pi}}{2}</code></div>
+    </section>
+
+    <section class="options">
+      <label><input id="displayMode" type="checkbox" checked /> display style</label>
+      <label>基準高さ <input id="heightPt" type="number" min="12" max="180" step="1" value="42" /> pt</label>
+      <label>色 <input id="equationColor" type="color" value="#111111" /></label>
+    </section>
+
+    <section class="previewBlock">
+      <div class="previewHeader">
+        <span>Preview</span>
+        <button id="previewButton" type="button" class="ghost">再描画</button>
+      </div>
+      <div id="preview" class="preview" aria-live="polite"></div>
+    </section>
+
+    <section class="buttons">
+      <button id="insertButton" type="button">新しく挿入</button>
+      <button id="loadButton" type="button" class="secondary">選択数式を読み込み</button>
+      <button id="updateButton" type="button" class="secondary">選択数式を更新</button>
+    </section>
+
+    <section class="miniHelp">
+      <strong>使い方</strong>
+      <ol>
+        <li>LaTeXを入力して「新しく挿入」。</li>
+        <li>スライド上の数式をクリックすると、保存されたLaTeXが自動で読み込まれます。</li>
+        <li>修正後に「選択数式を更新」。</li>
+      </ol>
+    </section>
+
+    <p id="status" class="status">Officeを初期化しています…</p>
+  </main>
+  <script src="taskpane.js"></script>
+</body>
+</html>

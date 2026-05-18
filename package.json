@@ -1,0 +1,17 @@
+{
+  "name": "latex-powerpoint-equation-addin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PowerPoint Office Add-in: insert and re-edit LaTeX equations as SVG shapes.",
+  "scripts": {
+    "start": "node server.js",
+    "validate": "office-addin-manifest validate manifest.xml"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "office-addin-dev-certs": "^2.0.7"
+  },
+  "devDependencies": {
+    "office-addin-manifest": "^2.1.3"
+  }
+}
